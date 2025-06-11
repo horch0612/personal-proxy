@@ -1,9 +1,5 @@
 # NAME: Personal-Proxy
-# AUTHOR: wfp0612
-# REPO: https://github.com/wfp0612/personal-proxy/new/main
-# UPDATED: 2024-04-14 16:16:54
-# DOMAIN-SUFFIX: 4
-# TOTAL: 4
+
 DOMAIN-SUFFIX,figma.com
 DOMAIN-SUFFIX,piclumen.art
 DOMAIN-SUFFIX,piclumen.com
