@@ -1,0 +1,38 @@
+name: Auto Update Data
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # 每小时执行一次
+  workflow_dispatch:  # 允许手动触发
+  push:
+分支:
+      - main  # 在主分支推送时触发
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest  # 运行环境
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2  # 获取仓库中的代码
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # 设置 Python 版本
+
+    - name: Install dependencies
+      run: |
+        pip install requests  # 安装所需的 Python 库
+
+    - name: Run the Python script
+      run: |
+        python update_data.py  # 运行处理脚本
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "horch0612"
+        git config --global user.email "wfp0612@gmail.com"
+        git add updated_data.txt
+        git commit -m "Update data file"
+        git push origin main  # 将修改后的文件推送到 GitHub
