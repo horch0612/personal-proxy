@@ -1,7 +1,7 @@
 import requests
 
 # 原始链接地址
-url = "https://github.com/ignaciocastro/a-dove-is-dumb/blob/main/list.txt"  # 请替换成你的原始数据链接
+url = "https://raw.githubusercontent.com/ignaciocastro/a-dove-is-dumb/refs/heads/main/list.txt"  # 请替换成你的原始数据链接
 
 # 获取数据
 response = requests.get(url)
