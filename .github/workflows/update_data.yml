@@ -35,8 +35,6 @@ jobs:
   run: |
     git config --global user.name "GitHub Actions"
     git config --global user.email "actions@github.com"
-    git add updated_data.txt
-    git commit -m "Update data file" || echo "No changes to commit"
+    git add adobe_crack.txt  # 使用新的文件名
+    git commit -m "Update adobe_crack file" || echo "No changes to commit"
     git push https://x-access-token:${GITHUB_TOKEN}@github.com/horch0612/personal-proxy.git main
-
-
