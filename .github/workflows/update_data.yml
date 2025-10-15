@@ -30,9 +30,12 @@ jobs:
         python update_data.py  # 运行处理脚本
 
     - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name "horch0612"
         git config --global user.email "wfp0612@gmail.com"
         git add updated_data.txt
-        git commit -m "Update data file"
-        git push origin main  # 将修改后的文件推送到 GitHub
+        git commit -m "Update data file" || echo "No changes to commit"
+        git push https://x-access-token:${GITHUB_TOKEN}@github.com/horch0612/personal-proxy.git main
+
