@@ -18,7 +18,7 @@ for line in lines:
         parts = line.strip().split()
         # 确保格式正确（有域名部分）
         if len(parts) == 2:
-            processed_lines.append(f"aabb, {parts[1]}")
+            processed_lines.append(f"DOMAIN,{parts[1]}")
     # 其他行（空行或异常格式）可忽略
     else:
         continue
