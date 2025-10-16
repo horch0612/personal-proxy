@@ -24,6 +24,6 @@ for line in lines:
         continue
 
 # 保存处理结果到文件
-with open("adobe_crack.txt", "w") as f:  # 修改为 adobe_crack.txt
+with open("adobe_crack.list", "w") as f:  # 修改为 adobe_crack.txt
     for line in processed_lines:
         f.write(line + "\n")
