@@ -5,7 +5,7 @@ on:
     - cron: '0 * * * *'  # 每小时执行一次
   workflow_dispatch:  # 允许手动触发
   push:
-    branchers:
+分支:
       - main  # 在主分支推送时触发
 
 jobs:
@@ -29,12 +29,12 @@ jobs:
       run: |
         python update_data.py  # 运行处理脚本
 
-- name: Commit and push changes
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  run: |
-    git config --global user.name "GitHub Actions"
-    git config --global user.email "actions@github.com"
-    git add adobe_crack.txt  # 使用新的文件名
-    git commit -m "Update adobe_crack file" || echo "No changes to commit"
-    git push https://x-access-token:${GITHUB_TOKEN}@github.com/horch0612/personal-proxy.git main
+    - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add adobe_crack.txt  # 使用 adobe_crack.txt 文件名
+        git commit -m "Update adobe_crack file" || echo "No changes to commit"
+        git push https://x-access-token:${GITHUB_TOKEN}@github.com/horch0612/personal-proxy.git main
