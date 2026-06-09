@@ -1,7 +1,6 @@
 # NAME: Personal-Proxy
 
 DOMAIN-SUFFIX,figma.com
-DOMAIN-SUFFIX,piclumen.art
 DOMAIN-SUFFIX,piclumen.com
 DOMAIN-SUFFIX,aiease.com
 DOMAIN-SUFFIX,freepik.com
@@ -18,3 +17,4 @@ DOMAIN-SUFFIX,llgjc.org
 DOMAIN-KEYWORD,llg
 DOMAIN-SUFFIX,magnific.com
 DOMAIN-SUFFIX,nssurge.com
+DOMAIN-KEYWORD,huyun
